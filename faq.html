@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>FAQ | HTML + CSS</title>
+
+    <script src="https://kit.fontawesome.com/d0544f08d4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/framework.css" />
+    <link rel="stylesheet" href="css/dropdown-nav.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+  </head>
+
+  <body>
+    <input type="checkbox" id="mobile-nav-toggle" />
+
+    <label for="mobile-nav-toggle" class="hamburger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <div class="mobile-nav">
+      <nav>
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+          <input type="checkbox" id="mobile-about-toggle" class="mobile-dropdown-toggle" />
+          <label for="mobile-about-toggle">About <i class="fa-solid fa-chevron-down"></i></label>
+          <div class="dropdown-menu">
+            <a href="about.html">About</a>
+            <a href="faq.html" class="active">FAQ</a>
+            <a href="contacts.html">Contacts</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <input type="checkbox" id="mobile-activities-toggle" class="mobile-dropdown-toggle" />
+          <label for="mobile-activities-toggle">Activities <i class="fa-solid fa-chevron-down"></i></label>
+          <div class="dropdown-menu">
+            <a href="activities.html">Activities</a>
+            <a href="showcase.html">Showcase</a>
+          </div>
+        </div>
+        <a href="resources.html">Resources</a>
+      </nav>
+    </div>
+
+    <div id="content-wrapper">
+      <header class="grid desktop-nav">
+        <a href="index.html" class="mobi2 tab2 desk2">
+          <img src="img/logoLightBG.png" alt="Club Name" />
+        </a>
+        <nav class="mobi0 tab2 desk2">
+          <a href="index.html">Home</a>
+          <div class="dropdown">
+            <a href="about.html" class="active">About <i class="fa-solid fa-chevron-down"></i></a>
+            <div class="dropdown-menu">
+              <a href="about.html">About</a>
+              <a href="faq.html" class="active">FAQ</a>
+              <a href="contacts.html">Contacts</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="activities.html">Activities <i class="fa-solid fa-chevron-down"></i></a>
+            <div class="dropdown-menu">
+              <a href="activities.html">Activities</a>
+              <a href="showcase.html">Showcase</a>
+            </div>
+          </div>
+          <a href="resources.html">Resources</a>
+        </nav>
+      </header>
+
+      <section class="full-height" id="hero-image">
+        <h1>Frequently Asked Questions</h1>
+        <p>Quick answers about joining, preparing for sessions, and contributing to the lab.</p>
+        <span><i class="fa-solid fa-arrow-down"></i></span>
+      </section>
+
+      <section class="grid">
+        <h1 class="mobi1 tab1 desk8">Getting Started</h1>
+        <p class="mobi1 tab1 desk3">
+          We run open enrollment each semester. You can drop into any studio night before officially applying to see if the vibe is right for you.
+        </p>
+      </section>
+
+      <section class="grid">
+        <div class="mobi1 tab2 desk2 card">
+          <h4>Do I need experience?</h4>
+          <p>No. Pods intentionally mix beginners with mentors. Bring curiosity and we will teach the rest.</p>
+        </div>
+        <div class="mobi1 tab2 desk2 card">
+          <h4>What should I bring?</h4>
+          <p>Laptop if you have one, but we keep shared kits—sketchbooks, tablets, sound recorders, and cameras—for anyone to borrow.</p>
+        </div>
+        <div class="mobi1 tab2 desk2 card">
+          <h4>Is there a membership fee?</h4>
+          <p>No fees. We ask for at least two volunteer hours per semester to keep the studio open and supplies restocked.</p>
+        </div>
+        <div class="mobi1 tab2 desk2 card">
+          <h4>How do teams get formed?</h4>
+          <p>Every sprint starts with interest surveys so we can match members with the mediums, partners, or causes they care about most.</p>
+        </div>
+      </section>
+
+      <div class="dark-bg-wrapper">
+        <section class="grid">
+          <div class="mobi1 tab8 desk2">
+            <h2>Program Logistics</h2>
+            <p>Planning a field trip or workshop? Here’s what to expect.</p>
+          </div>
+          <div class="mobi0 tab3 desk2"></div>
+          <div class="mobi1 tab2 desk2 icon-with-text">
+            <div><i class="fa-solid fa-calendar-check"></i></div>
+            <div>
+              <h4>Attendance</h4>
+              <p>RSVPs help us plan materials, but walk-ins are always welcome for internal sessions.</p>
+            </div>
+          </div>
+          <div class="mobi1 tab2 desk2 icon-with-text">
+            <div><i class="fa-solid fa-bus"></i></div>
+            <div>
+              <h4>Field Trips</h4>
+              <p>Transportation stipends are available; request one at least five days in advance.</p>
+            </div>
+          </div>
+          <div class="mobi1 tab2 desk2 icon-with-text">
+            <div><i class="fa-solid fa-headset"></i></div>
+            <div>
+              <h4>Accessibility</h4>
+              <p>We provide captioned slides, quiet rooms, and sensory kits—email us if you need something specific.</p>
+            </div>
+          </div>
+          <div class="mobi1 tab2 desk2 icon-with-text">
+            <div><i class="fa-solid fa-chart-simple"></i></div>
+            <div>
+              <h4>Project Credits</h4>
+              <p>Submit a short reflection and documentation after each sprint to earn transcript credit.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="grid no-gap callout">
+        <div class="mobi1 tab2 desk2">
+          <h2>Still curious?</h2>
+        </div>
+        <div class="mobi1 tab2 desk2">
+          <p>Send us your question and we will add it to the living FAQ for future members.</p>
+          <a href="contacts.html" class="button">Reach out</a>
+        </div>
+      </section>
+
+      <footer class="grid">
+        <img src="img/logoDarkBG.png" alt="Club Name" class="mobi1 tab2 desk2" />
+        <nav class="mobi1 tab2 desk2">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="activities.html">Activities</a>
+          <a href="resources.html">Resources</a>
+        </nav>
+        <hr class="mobi1 tab1 desk1" />
+        <a href="mailto:hello@clubname.com" class="mobi2 tab2 desk2">hello@clubname.com</a>
+        <p class="mobi2 tab2 desk2">&copy; 2025</p>
+      </footer>
+    </div>
+  </body>
+</html>

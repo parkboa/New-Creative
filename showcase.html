@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Showcase | HTML + CSS</title>
+
+    <script src="https://kit.fontawesome.com/d0544f08d4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/framework.css" />
+    <link rel="stylesheet" href="css/dropdown-nav.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+  </head>
+
+  <body>
+    <input type="checkbox" id="mobile-nav-toggle" />
+
+    <label for="mobile-nav-toggle" class="hamburger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <div class="mobile-nav">
+      <nav>
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+          <input type="checkbox" id="mobile-about-toggle" class="mobile-dropdown-toggle" />
+          <label for="mobile-about-toggle">About <i class="fa-solid fa-chevron-down"></i></label>
+          <div class="dropdown-menu">
+            <a href="about.html">About</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contacts.html">Contacts</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <input type="checkbox" id="mobile-activities-toggle" class="mobile-dropdown-toggle" />
+          <label for="mobile-activities-toggle">Activities <i class="fa-solid fa-chevron-down"></i></label>
+          <div class="dropdown-menu">
+            <a href="activities.html">Activities</a>
+            <a href="showcase.html" class="active">Showcase</a>
+          </div>
+        </div>
+        <a href="resources.html">Resources</a>
+      </nav>
+    </div>
+
+    <div id="content-wrapper">
+      <header class="grid desktop-nav">
+        <a href="index.html" class="mobi2 tab2 desk2">
+          <img src="img/logoLightBG.png" alt="Club Name" />
+        </a>
+        <nav class="mobi0 tab2 desk2">
+          <a href="index.html">Home</a>
+          <div class="dropdown">
+            <a href="about.html">About <i class="fa-solid fa-chevron-down"></i></a>
+            <div class="dropdown-menu">
+              <a href="about.html">About</a>
+              <a href="faq.html">FAQ</a>
+              <a href="contacts.html">Contacts</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="activities.html" class="active">Activities <i class="fa-solid fa-chevron-down"></i></a>
+            <div class="dropdown-menu">
+              <a href="activities.html">Activities</a>
+              <a href="showcase.html" class="active">Showcase</a>
+            </div>
+          </div>
+          <a href="resources.html">Resources</a>
+        </nav>
+      </header>
+
+      <section class="full-height" id="hero-image">
+        <h1>Showcase & Exhibition Hub</h1>
+        <p>Celebrate member projects through immersive installations, pop-up galleries, and digital premieres.</p>
+        <span><i class="fa-solid fa-arrow-down"></i></span>
+      </section>
+
+      <section class="grid">
+        <h1 class="mobi1 tab1 desk8">Upcoming Shows</h1>
+        <p class="mobi1 tab1 desk3">
+          Every semester culminates in a public showcase. RSVP for seats, volunteer to install, or submit a piece for the open call.
+        </p>
+      </section>
+
+      <section class="grid">
+        <div class="mobi1 tab2 desk4">
+          <img src="img/smaller-image.png" alt="immersive show" />
+          <h4>Flux 2025</h4>
+          <p>Projection-mapped zines exploring collective memory.</p>
+        </div>
+        <div class="mobi1 tab2 desk4">
+          <img src="img/smaller-image.png" alt="sound showcase" />
+          <h4>Signals</h4>
+          <p>Surround sound installation featuring our sound lab cohort.</p>
+        </div>
+        <div class="mobi1 tab2 desk4">
+          <img src="img/smaller-image.png" alt="residency show" />
+          <h4>Residency Spotlight</h4>
+          <p>Four micro-residencies debut new work-in-progress.</p>
+        </div>
+      </section>
+
+      <div class="dark-bg-wrapper">
+        <section class="grid">
+          <div class="mobi1 tab8 desk2">
+            <h2>How It Works</h2>
+            <p>We treat each showcase like a collaborative project—from curation to install.</p>
+          </div>
+          <div class="mobi0 tab3 desk2"></div>
+          <div class="mobi1 tab2 desk2 icon-with-text">
+            <div><i class="fa-solid fa-clipboard-list"></i></div>
+            <div>
+              <h4>Submit Work</h4>
+              <p>Share a project brief, media, and tech requirements at least three weeks prior.</p>
+            </div>
+          </div>
+          <div class="mobi1 tab2 desk2 icon-with-text">
+            <div><i class="fa-solid fa-swatchbook"></i></div>
+            <div>
+              <h4>Curate</h4>
+              <p>The curation pod pairs each piece with writers, fabricators, or doc teams.</p>
+            </div>
+          </div>
+          <div class="mobi1 tab2 desk2 icon-with-text">
+            <div><i class="fa-solid fa-hammer"></i></div>
+            <div>
+              <h4>Install</h4>
+              <p>Install week includes skill-shares on lighting, spatial audio, and signage.</p>
+            </div>
+          </div>
+          <div class="mobi1 tab2 desk2 icon-with-text">
+            <div><i class="fa-solid fa-bullhorn"></i></div>
+            <div>
+              <h4>Promote</h4>
+              <p>Members co-create press kits, reels, and live-stream scripts.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="grid">
+        <div class="mobi1 tab1 desk1">
+          <h3>Past Highlights</h3>
+          <p>Explore documentation from recent showcases.</p>
+        </div>
+        <div class="mobi1 tab2 desk4 card">
+          <h4>City of Light</h4>
+          <p>Interactive wayfinding experience prototyped with the Department of Transportation.</p>
+          <a class="button" href="resources.html">View case study</a>
+        </div>
+        <div class="mobi1 tab2 desk4 card">
+          <h4>Tiny Library</h4>
+          <p>Augmented reality mural that surfaces student zines when scanned.</p>
+          <a class="button" href="resources.html">Download toolkit</a>
+        </div>
+        <div class="mobi1 tab2 desk4 card">
+          <h4>Analog Internet</h4>
+          <p>Participatory installation that mapped community care networks.</p>
+          <a class="button" href="activities.html">See process</a>
+        </div>
+      </section>
+
+      <section class="grid no-gap callout">
+        <div class="mobi1 tab2 desk2">
+          <h2>Submit Your Work</h2>
+        </div>
+        <div class="mobi1 tab2 desk2">
+          <p>Complete the showcase submission form with media files, tech specs, and collaborator credits.</p>
+          <a href="https://forms.gle" class="button">Submit project</a>
+        </div>
+      </section>
+
+      <footer class="grid">
+        <img src="img/logoDarkBG.png" alt="Club Name" class="mobi1 tab2 desk2" />
+        <nav class="mobi1 tab2 desk2">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="activities.html" class="active">Activities</a>
+          <a href="resources.html">Resources</a>
+        </nav>
+        <hr class="mobi1 tab1 desk1" />
+        <a href="mailto:hello@clubname.com" class="mobi2 tab2 desk2">hello@clubname.com</a>
+        <p class="mobi2 tab2 desk2">&copy; 2025</p>
+      </footer>
+    </div>
+  </body>
+</html>
