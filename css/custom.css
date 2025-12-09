@@ -29,7 +29,7 @@ Experiment with colors, typography, spacing, and component styles.
    ========================================================================== */
 
 :root {
-  --primary-100: #3A4E6A;
+  --primary-100: #2B2D42;
   --primary-80: #486284;
   --primary-50: #9CB0C9;
   --primary-25: #CED7E4;
@@ -37,6 +37,13 @@ Experiment with colors, typography, spacing, and component styles.
   --white: #fff;
   
   /* You can add more custom colors here */
+--colour-1: #2B2D42;
+--colour-2: #1F473C;
+--colour-3: #F4F4EC;
+--colour-4: #97F2E9;
+--colour-5: #FDFF8A;
+--colour-6: #414046;
+--colour-7: #000000;
 
 }
 
@@ -49,33 +56,98 @@ Experiment with colors, typography, spacing, and component styles.
 
 body {
   color: var(--primary-80);
+  background-color: var(--colour-6);
   /* font-family is set in framework.css but you can override it here if needed */
 }
 
 /* Heading Styles - Customize sizes, colors, spacing */
 h1, h2, h3, h4, h5, h6 { 
   line-height: 1.1;
-  color: var(--primary-80);
+  color: var(--colour-7);
   /* Add your custom heading styles here */
+.dm-mono-light {
+  font-family: "DM Mono", monospace;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.dm-mono-regular {
+  font-family: "DM Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dm-mono-medium {
+  font-family: "DM Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.dm-mono-light-italic {
+  font-family: "DM Mono", monospace;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.dm-mono-regular-italic {
+  font-family: "DM Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.dm-mono-medium-italic {
+  font-family: "DM Mono", monospace;
+  font-weight: 500;
+  font-style: italic;
+}
 }
 
 h1 { 
-  font-size: 90px;
-  /* Try adding: font-weight, color, text-transform, etc. */
+  font-family: "DM Mono", monospace;
+  font-weight: 500;
+  font-size: 55pt;
+  line-height: 130%;
+  letter-spacing: 0.15em;
+  /* Try adding: text-transform, etc. */
 }
 
 h2 { 
-  font-size: 42px;
+  font-family: "DM Mono", monospace;
+  font-weight: 500;
+  font-size: 40pt;
+  line-height: 150%;
+  letter-spacing: 0;
+  color: var(--colour-4);
 }
 
 
 
 h3 { 
-  font-size: 30px;
+  overflow: hidden;
+  color: var(--colour-5);
+  text-overflow: ellipsis;
+  font-family: "DM Mono", monospace;
+  font-size: 39px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 48px; /* 123.077% */
 }
 
 h4 { 
-  font-size: 24px;
+  color: var(--colour-1);
+  text-align: center;
+  font-family: "DM Mono", monospace;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 48px; /* 133.333% */
+  letter-spacing: 0.15px;
+}
+
+.dark-bg-wrapper h4,
+section .card h4 {
+  color: var(--colour-1);
+  text-align: center;
 }
 
 h5 { 
@@ -201,7 +273,7 @@ header nav a.active {
 
 #hero-image h1 {
   text-align: center;
-  color: var(--white);
+  color: var(--colour-7);
   margin: 0; 
 
 }
@@ -446,6 +518,7 @@ header nav a.active {
 
 .resource-panel .resource-summary {
   text-align: center;
+  color: var(--colour-1);
 }
 
 .resource-panel-details {
@@ -564,7 +637,10 @@ footer nav, footer p {
    COMPONENTS - CUSTOMIZE REUSABLE ELEMENTS
    ========================================================================== */
 
-.dark-bg-wrapper h2,
+.dark-bg-wrapper h2 {
+  color: var(--colour-4);
+}
+
 .dark-bg-wrapper h3,
 .dark-bg-wrapper h4,
 .dark-bg-wrapper p {
