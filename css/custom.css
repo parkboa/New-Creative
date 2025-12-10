@@ -57,7 +57,7 @@ Experiment with colors, typography, spacing, and component styles.
 body {
   color: var(--primary-80);
   background-color: var(--colour-6);
-  /* font-family is set in framework.css but you can override it here if needed */
+  font-family: "DM Sans", "PPPangramSans", sans-serif;
 }
 
 /* Heading Styles - Customize sizes, colors, spacing */
@@ -126,7 +126,7 @@ h3 {
   overflow: hidden;
   color: var(--colour-5);
   text-overflow: ellipsis;
-  font-family: "DM Mono", monospace;
+  font-family: "DM Sans", monospace;
   font-size: 39px;
   font-style: normal;
   font-weight: 500;
@@ -136,7 +136,7 @@ h3 {
 h4 { 
   color: var(--colour-1);
   text-align: center;
-  font-family: "DM Mono", monospace;
+  font-family: "DM Sans", monospace;
   font-size: 36px;
   font-style: normal;
   font-weight: 500;
@@ -150,20 +150,57 @@ section .card h4 {
   text-align: center;
 }
 
+section .card h4,
+section .card h5,
+section .card p {
+  color: var(--colour-2);
+}
+
+.contact-info li h6 {
+  color: #fff89c;
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin: 0;
+}
+
 h5 { 
-  font-size: 20px;
+  color: #1F473C;
+  font-family: "DM Sans", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%; /* 35.2px */
+  letter-spacing: 0.15px;
 }
 
 h6 { 
-  font-size: 18px;
+  color: var(--colour-1);
+  font-family: "DM Sans", sans-serif;
+  font-size: var(--spacing8x3, 24px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%; /* 26.4px */
+  letter-spacing: 0.15px;
+}
+
+h7 {
+  color: var(--3, #F4F4EC);
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 17.753px; /* 88.764% */
+  letter-spacing: 0.37px;
 }
 
 /* Paragraph Styles */
 p {
-  font-size: 18px;
-  line-height: 1.5;
-  color: var(--primary-80);
-  /* Try adjusting: line-height, letter-spacing, margin-bottom */
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 17.786px; /* 148.213% */
+  color: var(--3, #F4F4EC);
 }
 
 img + h4,
@@ -391,18 +428,22 @@ header nav a.active {
 }
 
 .button-submit {
-  background: #a3f5f1;
-  border: none;
-  border-radius: 999px;
-  padding: var(--spacing8x2) var(--spacing8x4);
+  border-radius: 50px;
+  border: 2px solid var(--primary-80);
+  padding: 10px 20px 8px;
+  background: transparent;
+  color: var(--primary-80);
+  font-family: "DM Sans", sans-serif;
   font-size: 1rem;
   cursor: pointer;
-  margin-top: var(--spacing8x1);
+  margin-top: var(--spacing8x2);
   align-self: flex-start;
+  text-transform: none;
 }
 
 .button-submit:hover {
-  background: #8be0dc;
+  background: var(--dark);
+  color: var(--white);
 }
 
 .contact-info {
@@ -519,6 +560,58 @@ header nav a.active {
 .resource-panel .resource-summary {
   text-align: center;
   color: var(--colour-1);
+}
+
+.showcase-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7.397px;
+  width: 331.384px;
+  max-width: 100%;
+  height: 341px;
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+  padding: var(--spacing8x2);
+  border-radius: var(--spacing8x2);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  box-sizing: border-box;
+}
+
+.showcase-card picture,
+.showcase-card picture img {
+  width: 100%;
+  border-radius: var(--spacing8x1);
+}
+
+.showcase-content {
+  background: rgba(64, 64, 79, 0.95);
+  width: 100%;
+  border-radius: var(--spacing8x2);
+  padding: var(--spacing8x2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing8x1);
+}
+
+.showcase-content h4,
+.showcase-content h5,
+.showcase-content p {
+  color: var(--white);
+  margin: 0;
+}
+
+.showcase-content h4 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.showcase-content h5 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
 }
 
 .resource-panel-details {
