@@ -541,6 +541,16 @@ header nav a.active {
 
 .resource-note li {
   margin-bottom: var(--spacing8x1);
+  list-style: disc;
+  margin-left: var(--spacing8x2);
+}
+
+.resource-note h7 {
+  color: var(--colour-2);
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin: 0;
 }
 
 .stacked-resources {
@@ -557,10 +567,10 @@ header nav a.active {
   gap: var(--spacing8x4);
 }
 
-.resource-panel .resource-summary {
-  text-align: center;
-  color: var(--colour-1);
-}
+ .resource-panel .resource-summary {
+   text-align: center;
+   color: var(--colour-2);
+ }
 
 .showcase-card {
   display: flex;
@@ -616,6 +626,7 @@ header nav a.active {
 
 .resource-panel-details {
   width: 100%;
+  color: var(--colour-2);
 }
 
 .resource-panel-details ol {
