@@ -56,7 +56,7 @@ Experiment with colors, typography, spacing, and component styles.
 
 body {
   color: var(--primary-80);
-  background-color: var(--colour-6);
+  background-color: var(--colour-1);
   font-family: "DM Sans", "PPPangramSans", sans-serif;
 }
 
@@ -105,7 +105,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 { 
   font-family: "DM Mono", monospace;
   font-weight: 500;
-  font-size: 55pt;
+  font-size: 50pt;
   line-height: 130%;
   letter-spacing: 0.15em;
   /* Try adding: text-transform, etc. */
@@ -282,23 +282,48 @@ header img {
 
 header nav {
   text-align: right;
-  font-size: 15px;
+  font-size: var(--spacing8x3, 24px);
+  font-family: "DM Sans", sans-serif;
+  color: var(--colour-3);
 }
 
 header nav a {
   margin-left: 40px;
-  /* Try adding: text-transform, font-weight, padding for button-style nav */
+  color: var(--colour-3);
+  font-family: "DM Sans", sans-serif;
+  font-size: var(--spacing8x3, 24px);
+  font-weight: 500;
+  line-height: 110%;
+  letter-spacing: 0.15px;
+  text-transform: none;
 }
 
 header nav a.active {
-  border-bottom: 2px solid var(--primary-80);
+  border-bottom: 2px solid var(--colour-3);
   padding-bottom: 2px;
+}
+
+.desktop-nav nav .dropdown-menu,
+.mobile-nav nav .dropdown-menu {
+  background-color: var(--colour-1);
+  border: 1.5px solid var(--colour-1);
+}
+
+.desktop-nav nav .dropdown-menu a,
+.mobile-nav nav .dropdown-menu a {
+  color: var(--colour-3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.desktop-nav nav .dropdown-menu a:hover,
+.mobile-nav nav .dropdown-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
 
 /* Hero section */
 #hero-image {
-  background: url('../img/cwchero.jpg') no-repeat center center/cover;
+  background: url('../img/hero-home.png') no-repeat center center/cover;
   height: 95vh;
   margin: 0;
   display: flex;
@@ -309,10 +334,16 @@ header nav a.active {
 }
 
 #hero-image h1 {
+  display: flex;
+  width: 1440px;
+  height: 863px;
+  padding: 150px 471px 500px 571px;
+  justify-content: flex-end;
+  align-items: center;
+  flex-shrink: 0;
   text-align: center;
   color: var(--colour-7);
   margin: 0; 
-
 }
 
 #hero-image p {
@@ -330,6 +361,18 @@ header nav a.active {
   align-items: center;
   justify-content: center;
   margin-top: var(--spacing8x12);
+}
+
+#hero-image.hero-about {
+  background: url('../img/hero-about.png') no-repeat center center/cover;
+}
+
+#hero-image.hero-activities {
+  background: url('../img/hero-activities.png') no-repeat center center/cover;
+}
+
+#hero-image.hero-resources {
+  background: url('../img/hero-resources.png') no-repeat center center/cover;
 }
 
 
@@ -693,14 +736,25 @@ section p + a.button {
 /* Footer Styles */
 footer {
   width: 100%;
-  background: var(--primary-100);
-  color: var(--white);
+  background: transparent;
+  color: var(--colour-3);
   padding: 40px 20px 20px;
   /* Try customizing: background gradients, text alignment, etc. */
 }
 
 footer img {
   width: 160px;
+}
+
+.footer-email {
+  color: var(--colour-3);
+  font-family: "DM Sans", sans-serif;
+  font-size: var(--spacing8x3, 24px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%;
+  letter-spacing: 0.15px;
+  text-align: right;
 }
 
 footer hr {
@@ -710,7 +764,7 @@ footer hr {
 }
 
 footer a, footer p {
-  color: var(--secondary-color);
+  color: var(--colour-3);
   font-size: 12px;
 }
 
@@ -874,4 +928,27 @@ hr {
   .resource-panel .resource-summary {
     width: 260px;
   }
+}
+.about-section {
+  display: flex;
+  width: 100vw;
+  padding: 64px 100px;
+  align-items: flex-start;
+  gap: 50px;
+  background-color: var(--colour-6);
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  margin-top: 0;
+  margin-bottom: 0;
+  box-sizing: border-box;
+}
+
+.about-title {
+  margin: 0;
+}
+
+.about-copy {
+  color: var(--colour-5);
+  line-height: 48px; /* 200% */
+  margin: 0;
 }
