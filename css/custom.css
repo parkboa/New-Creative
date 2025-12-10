@@ -806,8 +806,18 @@ footer nav, footer p {
    COMPONENTS - CUSTOMIZE REUSABLE ELEMENTS
    ========================================================================== */
 
-.dark-bg-wrapper h2 {
+.check-out-banner {
+  padding: 32px calc(50vw - 50%);
+  height: 136px;
+  border-top: 1px solid var(--colour-3);
+  border-bottom: 1px solid var(--colour-3);
+  background: var(--colour-1);
+}
+
+.check-out-banner h2 {
   color: var(--colour-4);
+  text-align: center;
+  margin: 0;
 }
 
 .dark-bg-wrapper h3,
@@ -964,4 +974,13 @@ hr {
   color: var(--colour-5);
   line-height: 48px; /* 200% */
   margin: 0;
+}
+
+.check-out-wrapper {
+  display: flex;
+  width: 1274px;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 0 0;
+  margin: 0 auto;
 }
