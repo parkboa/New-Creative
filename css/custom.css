@@ -538,8 +538,29 @@ header nav a.active {
   color: var(--colour-2);
 }
 
+.contact-section .button {
+  background: var(--colour-4);
+  border: 1px solid var(--colour-1);
+  color: var(--colour-1);
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 110%;
+  letter-spacing: 0.15px;
+}
+
 .contact-section .image {
   background: url('../img/whyjoin.jpg') center center/cover no-repeat;
+}
+
+@media only screen and (max-width: 799px) {
+  .contact-section .image {
+    display: none;
+  }
+
+  .contact-section {
+    height: auto;
+  }
 }
 .resource-highlight {
   background: #fff89c;
@@ -843,6 +864,11 @@ footer a, footer p {
   font-size: 12px;
 }
 
+footer .footer-right {
+  text-align: right;
+  display: block;
+}
+
 footer nav a { 
   font-size: 14px;
 }
@@ -888,10 +914,18 @@ footer nav, footer p {
   background: var(--colour-1);
 }
 
+.check-out-banner .check-out-wrapper {
+  width: 100%;
+  max-width: 1274px;
+  margin: 0 auto;
+}
+
 .check-out-banner h2 {
   color: var(--colour-4);
   text-align: center;
   margin: 0;
+  font-size: clamp(24px, 6vw, 40pt);
+}
 }
 
 .dark-bg-wrapper h3,
@@ -1060,11 +1094,9 @@ hr {
   margin: 0;
 }
 
-.check-out-wrapper {
-  display: flex;
-  width: 1274px;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1 0 0;
-  margin: 0 auto;
+@media only screen and (max-width: 799px) {
+  .check-out-banner {
+    padding: 24px 20px;
+    height: auto;
+  }
 }
