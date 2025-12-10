@@ -523,6 +523,24 @@ header nav a.active {
   font-size: 1.1rem;
 }
 
+.contact-section {
+  background: #ffffff;
+  height: 720px;
+  color: var(--colour-2);
+}
+
+.contact-section .text h3 {
+  margin-bottom: 30px;
+}
+
+.contact-section .text h3,
+.contact-section .text h6 {
+  color: var(--colour-2);
+}
+
+.contact-section .image {
+  background: url('../img/whyjoin.jpg') center center/cover no-repeat;
+}
 .resource-highlight {
   background: #fff89c;
   border-radius: 28px;
@@ -616,56 +634,112 @@ header nav a.active {
    color: var(--colour-2);
  }
 
-.showcase-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 7.397px;
-  width: 331.384px;
-  max-width: 100%;
-  height: 341px;
-  grid-row: 1 / span 1;
-  grid-column: 1 / span 1;
-  padding: var(--spacing8x2);
-  border-radius: var(--spacing8x2);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-  box-sizing: border-box;
+.showcase-section {
+  background: var(--colour-6);
+  width: 100%;
 }
 
-.showcase-card picture,
+.showcase-grid {
+  display: grid;
+  width: 100%;
+  max-width: var(--Spacing-Desktop-Max-Width, 1440px);
+  height: 426px;
+  padding: 32px 200px;
+  margin: 0 auto;
+  row-gap: 32px;
+  column-gap: 23px;
+  flex-shrink: 0;
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+  grid-template-columns: repeat(3, 332px);
+  justify-content: center;
+}
+
+.showcase-grid-multi {
+  height: auto;
+  grid-template-rows: unset;
+  grid-auto-rows: minmax(0, 1fr);
+  padding-bottom: 32px;
+}
+
+.showcase-card {
+  width: 332px;
+  height: 341px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0;
+  overflow: hidden;
+  background: transparent;
+  box-shadow: none;
+}
+
+.showcase-card picture {
+  width: 100%;
+  height: 205px;
+  display: block;
+  margin-bottom: 8px;
+}
+
 .showcase-card picture img {
   width: 100%;
-  border-radius: var(--spacing8x1);
+  height: 205px;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
 }
 
 .showcase-content {
-  background: rgba(64, 64, 79, 0.95);
-  width: 100%;
-  border-radius: var(--spacing8x2);
-  padding: var(--spacing8x2);
-  text-align: center;
+  background: transparent;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing8x1);
+  gap: 8px;
+  flex: 1 1 auto;
+  text-align: left;
+  width: 332px;
+  max-width: 100%;
+  min-height: 89px;
+  align-self: stretch;
+  overflow: hidden;
 }
 
 .showcase-content h4,
 .showcase-content h5,
 .showcase-content p {
-  color: var(--white);
+  color: var(--colour-3);
   margin: 0;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .showcase-content h4 {
   font-family: "DM Sans", sans-serif;
+  font-size: 20px;
   font-weight: 700;
-  font-size: 1.5rem;
+  line-height: 110%;
+  letter-spacing: 0.15px;
+  height: 30px;
+  max-height: 30px;
 }
 
 .showcase-content h5 {
   font-family: "DM Sans", sans-serif;
+  font-size: 20px;
   font-weight: 700;
-  font-size: 1.2rem;
+  line-height: 110%;
+  letter-spacing: 0.15px;
+  margin-top: 0;
+  height: 30px;
+  max-height: 30px;
+}
+
+.showcase-content p {
+  font-size: 12px;
+  line-height: 150%;
+  color: var(--colour-3);
+  width: 332px;
+  max-width: 100%;
+  height: 89px;
 }
 
 .resource-panel-details {
@@ -874,7 +948,17 @@ hr {
     height: 33vh;
   }
 
- 
+  .showcase-grid {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 32px 20px;
+    height: auto;
+  }
+
+  .showcase-card {
+    width: 332px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
 }
 
 /* Tablet-specific customizations */
