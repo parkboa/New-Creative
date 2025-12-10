@@ -131,6 +131,7 @@ h3 {
   font-style: normal;
   font-weight: 500;
   line-height: 48px; /* 123.077% */
+  margin: 0;
 }
 
 h4 { 
@@ -782,6 +783,16 @@ footer nav, footer p {
 
 /* Mobile Footer Adjustments */
 @media only screen and (max-width: 799px) {
+  .about-section {
+    padding: 64px 20px;
+    justify-content: flex-start;
+  }
+  .about-title {
+    font-size: var(--spacing8x3, 24px);
+  }
+  .about-title br {
+    display: none;
+  }
   footer nav {
     text-align: center;
   }
@@ -932,8 +943,9 @@ hr {
 .about-section {
   display: flex;
   width: 100vw;
-  padding: 64px 100px;
+  padding: 64px 20px;
   align-items: flex-start;
+  justify-content: center;
   gap: 50px;
   background-color: var(--colour-6);
   margin-left: calc(-50vw + 50%);
@@ -941,6 +953,7 @@ hr {
   margin-top: 0;
   margin-bottom: 0;
   box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
 .about-title {

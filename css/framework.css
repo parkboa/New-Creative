@@ -421,7 +421,7 @@ section {
   position: absolute;
   height: var(--spacing4x1);
   width: 100%;
-  background-color: var(--primary-100);
+  background-color: var(--colour-3);
   border-radius: var(spacing4x1);
   transition: all 0.3s ease-in-out;
 }
