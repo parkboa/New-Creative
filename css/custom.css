@@ -425,6 +425,34 @@ header nav a.active {
     font-size: 14px;
     padding-left: 0;
   }
+
+  .contact-callout {
+    flex-direction: column;
+    padding: 32px 20px;
+    gap: 24px;
+  }
+
+  .contact-card {
+    padding: 32px;
+    min-height: auto;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .about-block-top {
+    padding-top: 96px;
+    padding-bottom: 32px;
+  }
+
+  .about-block-middle {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .about-block-bottom {
+    padding-top: 32px;
+    padding-bottom: 96px;
+  }
 }
 
 /* Light background wrapper - extends to viewport edges */
@@ -449,7 +477,11 @@ header nav a.active {
 
 .contact-callout {
   background: #2f2e38;
-  align-items: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 48px;
+  padding: 48px 200px;
 }
 
 .contact-callout .contact-card,
@@ -461,18 +493,24 @@ header nav a.active {
   background: #fff89c;
   border-radius: 28px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-  padding: var(--spacing8x6);
+  padding: 48px;
+  max-width: 560px;
+  width: 100%;
+  min-height: 565px;
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-card form {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing8x2);
+  gap: 48px;
+  flex: 1;
 }
 
 .contact-card .form-row {
   display: flex;
-  gap: var(--spacing8x2);
+  gap: 21px;
   flex-wrap: wrap;
 }
 
@@ -1148,4 +1186,47 @@ hr {
   align-items: center;
   justify-content: center;
   grid-column: 4 / span 6;
+}
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 456px));
+  justify-content: center;
+  gap: 32px;
+  padding: 40px 200px;
+}
+
+.faq-card {
+  background: var(--colour-5);
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  color: var(--colour-2);
+  max-width: 456px;
+  width: 100%;
+}
+
+.faq-card h4 {
+  color: var(--colour-2);
+  font-size: 28px;
+  font-family: "DM Mono", monospace;
+  margin-top: 0;
+  margin-bottom: 48px;
+  text-align: left;
+}
+
+.faq-card h5 {
+  color: var(--colour-2);
+  font-size: 18px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+  text-align: left;
+}
+
+@media only screen and (max-width: 799px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
 }
