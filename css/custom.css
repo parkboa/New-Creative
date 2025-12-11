@@ -453,6 +453,36 @@ header nav a.active {
     padding-top: 32px;
     padding-bottom: 96px;
   }
+
+  .activities-pad-right {
+    padding-right: 200px !important;
+  }
+
+  .activities-pad-left {
+    padding-left: 200px !important;
+  }
+}
+
+.activities-order-1 { order: 1; }
+.activities-order-2 { order: 2; }
+.activities-order-3 { order: 3; }
+.activities-order-4 { order: 4; }
+.activities-order-5 { order: 5; }
+.activities-order-6 { order: 6; }
+.activities-order-7 { order: 7; }
+.activities-order-8 { order: 8; }
+
+@media only screen and (min-width: 800px) {
+  .activities-order-1,
+  .activities-order-2,
+  .activities-order-3,
+  .activities-order-4,
+  .activities-order-5,
+  .activities-order-6,
+  .activities-order-7,
+  .activities-order-8 {
+    order: initial;
+  }
 }
 
 /* Light background wrapper - extends to viewport edges */
@@ -484,8 +514,7 @@ header nav a.active {
   padding: 48px 200px;
 }
 
-.contact-callout .contact-card,
-.contact-callout .contact-info {
+.contact-callout > div {
   padding: 0;
 }
 
@@ -494,29 +523,38 @@ header nav a.active {
   border-radius: 28px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
   padding: 48px;
-  max-width: 560px;
-  width: 100%;
-  min-height: 565px;
+  width: 480px;
+  max-width: 100%;
+  height: 535px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .contact-card form {
   display: flex;
   flex-direction: column;
-  gap: 48px;
-  flex: 1;
+  gap: 20px;
+  flex: 0 0 auto;
+  width: 465px;
+  height: 350px;
+  max-width: 100%;
+  align-items: flex-start;
+  margin: 0 auto;
 }
 
 .contact-card .form-row {
   display: flex;
-  gap: 21px;
-  flex-wrap: wrap;
+  gap: 20px;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
 }
 
 .contact-card .form-row input {
-  flex: 1;
-  min-width: 180px;
+  flex: 0 0 calc((100% - 20px) / 2);
+  width: calc((100% - 20px) / 2);
 }
 
 .contact-card input,
@@ -531,6 +569,11 @@ header nav a.active {
   background: #fff;
 }
 
+.contact-card form > input,
+.contact-card form > textarea {
+  width: 100%;
+}
+
 .contact-card input::placeholder,
 .contact-card textarea::placeholder {
   color: #7a7a7a;
@@ -539,6 +582,29 @@ header nav a.active {
 .contact-card textarea {
   min-height: 140px;
   resize: vertical;
+  margin-bottom: 40px;
+}
+
+.contact-card button.button {
+  width: 432px;
+  height: 42px;
+  border-radius: 50px;
+  border: 2px solid var(--primary-80);
+  background: var(--colour-4);
+  color: var(--colour-1);
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: none;
+  cursor: pointer;
+}
+
+.contact-card button.button:hover {
+  background: var(--primary-80);
+  color: var(--white);
 }
 
 .button-submit {
@@ -831,6 +897,29 @@ header nav a.active {
   width: 332px;
   max-width: 100%;
   height: 89px;
+}
+
+.showcase-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 32px 0 64px;
+  background: var(--colour-6);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  font-family: "DM Mono", monospace;
+}
+
+.showcase-pagination span {
+  color: var(--colour-3);
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.showcase-pagination .pagination-number.active {
+  color: var(--colour-4);
 }
 
 .resource-panel-details {
@@ -1229,4 +1318,20 @@ hr {
     grid-template-columns: 1fr;
     padding: 40px 20px;
   }
+}
+.colour-6-bg {
+  background: var(--colour-6);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding-top: 64px;
+  padding-bottom: 64px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.dual-full-width {
+  background: var(--colour-6) !important;
+}
+.activities-colour-3 {
+  color: var(--colour-3);
 }
