@@ -383,6 +383,8 @@ header nav a.active {
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
   padding: 64px 200px;
+  margin-top: 0;
+  margin-bottom: 0;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
