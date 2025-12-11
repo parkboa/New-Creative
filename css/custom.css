@@ -126,7 +126,7 @@ h3 {
   overflow: hidden;
   color: var(--colour-5);
   text-overflow: ellipsis;
-  font-family: "DM Sans", monospace;
+  font-family: "DM Mono", monospace;
   font-size: 39px;
   font-style: normal;
   font-weight: 500;
@@ -378,21 +378,51 @@ header nav a.active {
 
 
 .text-hero {
-  background: var(--grey);
-  height: 95vh;
-  margin: 0;
+  background: var(--colour-6);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding: 64px 200px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: var(--spacing8x3);
+  align-items: flex-start;
+  gap: 16px;
 }
 
-.text-hero h1,
-.text-hero p {
-  color: var(--primary-80);
-  text-align: center;
+.text-hero h3 {
+  color: var(--colour-5);
+  font-family: "DM Mono", monospace;
+  font-size: 39px;
+  line-height: 1.2;
   margin: 0;
+  max-width: 840px;
+}
+
+.text-hero h6 {
+  color: var(--colour-3);
+  line-height: 1.5;
+  margin: 0;
+  max-width: 940px;
+  font-size: 18px;
+  padding-left: 100px;
+}
+
+@media only screen and (max-width: 799px) {
+  .text-hero {
+    padding: 40px 20px;
+    align-items: flex-start;
+  }
+
+  .text-hero h3 {
+    font-size: 28px;
+    padding-right: 0;
+  }
+
+  .text-hero h6 {
+    font-size: 14px;
+    padding-left: 0;
+  }
 }
 
 /* Light background wrapper - extends to viewport edges */
@@ -915,7 +945,7 @@ footer nav, footer p {
 }
 
 .check-out-banner .check-out-wrapper {
-  width: 100%;
+  width: auto;
   max-width: 1274px;
   margin: 0 auto;
 }
@@ -925,7 +955,14 @@ footer nav, footer p {
   text-align: center;
   margin: 0;
   font-size: clamp(24px, 6vw, 40pt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 2 / span 10;
 }
+
+.check-out-banner h2.start-col-3 {
+  grid-column: 1 / -1;
 }
 
 .dark-bg-wrapper h3,
@@ -1099,4 +1136,14 @@ hr {
     padding: 24px 20px;
     height: auto;
   }
+}
+.check-out-banner h2 {
+  color: var(--colour-4);
+  text-align: center;
+  margin: 0;
+  font-size: clamp(24px, 6vw, 40pt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 4 / span 6;
 }
